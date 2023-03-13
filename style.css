@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Ubuntu:wght@300;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 32px;
+    background: #f5f5f5;
+    font-family: "Ubuntu";
+    animation: rotate 6s infinite  alternate linear;
+}
+
+.circle {
+    position: fixed;
+    top: -70vmin;
+    left: -30vmin;
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+    background: rgba(165, 0, 165, 0.805);
+}
+
+
+.circle::after {
+    content: "";
+    position: inherit;
+    right: -50vmin;
+    bottom: -55vmin;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: rgba(114, 0, 114, 0.81);
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 160px 30px 38px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    background: #824cb8;
+    top: -880px;
+    left: 50%;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    translate: -50% 0;
+}
+
+.card .logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 64px;
+    width: 64px;
+    top: 30px;
+    left: 50%;
+    translate: -50% 0;
+}
+
+.card .logo i{
+    font-size: 50px;
+    color: #824cb8;
+    font-weight: 500;
+}
+
+.card>h2{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 30px;
+    color: #39234e;
+}
+
+.form {
+    margin: 0 0 30px;
+    display: grid;
+    gap: 18px;
+}
+
+.form>input, form>button {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.form>input {
+    border: 2px solid #8a3bd93f;
+    font-family: inherit;
+    font-size: 16px;
+    padding-left: 24px;
+    color: #45114c;
+    transition: all 0.375s;
+}
+
+.form>input:hover {
+    border: 2px solid #45008a;
+}
+
+.form>input::placeholder {
+    color: #45008a51;
+}
+
+.form>button {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    background: #9c39ffd4;
+    border: 0;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+    color: #fff;
+}
+
+#btnsign {
+    text-decoration: none;
+    color: #fff;
+}
+
+.form>button:hover {
+    background-color: #490053;
+}
+
+.card>footer {
+    color: #7b7b7b;
+}
+
+.card>footer>a {
+    color: #8000ff;
+    transition: all 0.375s;
+}
+
+.card>footer>a:hover {
+    color: #45008a;
+}
+
+@media (width >= 500px) {
+    body {
+        padding: 0;
+    }
+    .card{
+        margin: 0;
+        width: 400px;
+    }
+}
