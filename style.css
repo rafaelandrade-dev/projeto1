@@ -93,6 +93,10 @@ body {
     color: #39234e;
 }
 
+card {
+    max-width: 300px;
+}
+
 .form {
     margin: 0 0 30px;
     display: grid;
